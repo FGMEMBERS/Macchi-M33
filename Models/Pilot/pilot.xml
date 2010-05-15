@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>porco.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+
+    <!-- Objets transparents -->
+  </animation>
+
+<!--
+  <animation>
+    <type>rotate</type>
+    <object-name>tete</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> -15 </factor> 
+    <center>
+      <x-m>  0.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.307 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tete</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-25</factor>
+    <center>
+      <x-m>  0.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.307 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.000 </y>
+      <z> 1.000 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>tete</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -10.0</factor>
+    <center>
+      <x-m>  0.300 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.307 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation> 
+-->
+</PropertyList>
+

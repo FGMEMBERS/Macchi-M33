@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="m33-jsbsim-cnf.xml"> -->
+<PropertyList include="m33-yasim-cnf.xml">
+
+  <sim>
+    <description>Macchi M33</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+
