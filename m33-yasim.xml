@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Macchi M 33 - 2008 Emmanuel BARANGER
+                        update by Zexe
  
      sources      : http://en.wikipedia.org/wiki/Macchi_M.33
 
@@ -45,7 +46,7 @@
   <wing x="1.307" y="0" z="0.110" 
         chord="1.464" 
         length="5.1" 
-        camber="0.01"
+        camber="0.03"
         sweep="12">
         <stall aoa="16" width="6" peak="1.5"/>
         <flap1 start="0.62" end="1.00" lift="1.2" drag="1.2"/>
@@ -184,10 +185,9 @@
         spring-factor-not-planing="0.7">
   </gear>
 
-  <tank x="0.858" y="3" z="0.112" capacity="500"/>
-  <tank x="0.858" y="-3" z="0.112" capacity="500"/>
-
-  <!-- CG theorique x=3.435 y=0 z=-0.585 
-  <ballast x="0.0" y="0.0" z="0.0" mass="2100" /> -->
+  <!-- 1.6 pounds by liters
+       200 liters = 50 gal = 300.2 pds -->
+  <tank x="0.858" y="3" z="0.112" capacity="300.2"/>
+  <tank x="0.858" y="-3" z="0.112" capacity="300.2"/>
 
 </airplane>

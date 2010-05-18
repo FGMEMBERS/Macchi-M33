@@ -360,5 +360,51 @@
     </axis>
   </animation>
 
+  <!-- Effets lumineux -->
+  <model>
+    <path>Aircraft/Macchi-M33/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> 3.379 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.836 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Macchi-M33/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m> -0.276 </x-m>
+      <y-m> -4.884 </y-m>
+      <z-m>  0.097 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Macchi-M33/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> -0.276 </x-m>
+      <y-m>  4.884 </y-m>
+      <z-m>  0.097 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Macchi-M33/Models/lights/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.260 </x-m>
+      <y-m> -4.884 </y-m>
+      <z-m>  0.097 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Macchi-M33/Models/lights/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.260 </x-m>
+      <y-m>  4.884 </y-m>
+      <z-m>  0.097 </z-m>
+   </offsets>
+  </model>
+
 </PropertyList>
 
