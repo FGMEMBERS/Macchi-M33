@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>0.75</fuel-fraction>
+
+    <type type="string">seaplane</type>
+
+    <startup>
+      <splash-texture>Aircraft/Macchi-M33/m33-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Macchi-M33/Sounds/m33-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Macchi-M33/Models/m33.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Macchi-M33/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Macchi M 33</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew doors</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close passengers doors</desc>
+      </key>
+      <key>
+        <name>e</name>
+        <desc>Guns fire</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/m33-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/m33-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <m33>
+      <file>Aircraft/Macchi-M33/Nasal/doors.nas</file>
+      <file>Aircraft/Macchi-M33/Nasal/liveries.nas</file>
+      <file>Aircraft/Macchi-M33/Nasal/light.nas</file>
+    </m33>
+    <guns>
+      <file>Aircraft/Macchi-M33/Nasal/weapons.nas</file>
+    </guns>
+  </nasal>
+
+</PropertyList>
+

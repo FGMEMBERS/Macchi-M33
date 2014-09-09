@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Macchi M 33 - 2008 Emmanuel BARANGER
+                        update by Zexe
+ 
+     sources      : http://en.wikipedia.org/wiki/Macchi_M.33
+
+     Wingspan     : 10.00 m                           (      ft    in)
+     Lenght       :  8.28 m                           (      ft    in)
+     Height       :  2.68 m                           (      ft    in)
+     Weight       :   975 Kg                          ( 2150 lb)
+     Engines      : Curtiss D12 A                     (  443 hp)
+     Cruise speed :     km/h                          (      kts)
+     Max speed    : 279 km/h                          (
+-->
+
+<airplane mass="2150">
+
+  <approach speed="40" aoa="6" fuel="0.2">
+     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
+     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
+     <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+  </approach>
+
+  <cruise speed="150" alt="16400" fuel="0.8">
+     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.8"/>
+     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.8"/>
+     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.8"/>
+     <control-setting axis="/controls/engines/engine[1]/mixture" value="0.8"/>
+  </cruise>
+
+  <cockpit x="-0.212" y="0.356" z="-0.09"/>
+
+  <fuselage ax="4.130" ay="0" az="-0.640" bx="-3.901" by="0" bz="-0.667" width="1" taper="0.5" midpoint="0.25"/>
+
+  <!-- flotteur gauche -->
+  <fuselage ax="1.662" ay="2.917" az="-0.590" bx="-0.388" by="2.917" bz="-0.769" width="0.5" taper="0.5" midpoint="0.25"/>
+
+  <!-- flotteur droite -->
+  <fuselage ax="1.662" ay="-2.917" az="-0.590" bx="-0.388" by="-2.917" bz="-0.769" width="0.5" taper="0.5" midpoint="0.25"/>
+
+  <!-- Moteur -->
+  <fuselage ax="2.402" ay="0" az="0.789" bx="0.309" by="0" bz="0.789" width="0.95" taper="0.5" midpoint="0.25"/>
+
+  <wing x="1.307" y="0" z="0.110" 
+        chord="1.464" 
+        length="5.1" 
+        camber="0.03"
+        sweep="12">
+        <stall aoa="16" width="6" peak="1.5"/>
+        <flap1 start="0.62" end="1.00" lift="1.2" drag="1.2"/>
+        <control-input control="FLAP1" axis="/controls/flight/aileron" split="true"/>
+        <control-input control="FLAP1" axis="/controls/flight/aileron-trim" split="true"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <hstab x="-3.31" y="0" z="-0.2" 
+         chord="0.932" 
+         length="1.78"
+         taper="1" 
+         sweep="14"
+         incidence="3">
+         <stall aoa="16" width="3" peak="1.5"/>
+         <flap0 start="0" end="1.0" lift="1.5" drag="1.2"/>
+         <control-input control="FLAP0" axis="/controls/flight/elevator"/>
+         <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-3.2" y="0" z="-0.545" 
+         chord="1.533" 
+         length="1.5"
+         taper="0.5"
+         sweep="16">
+         <stall aoa="18" width="3" peak="1.5"/> 
+         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
+  </vstab>
+
+  <!--  Curtiss D12 A
+
+                 source       : http://en.wikipedia.org/wiki/Curtiss_D-12
+
+                 type         : 12 cylinder liquid cooled 60 degree V
+                 weight       :  314 kg  (693 lb)
+                 power        :  443 hp
+                 Displacement : 1145 in3 (18.8 l)
+                 Compression  : 6:1
+  -->
+  <propeller x="1.605" y="0.000" z="0.789"
+             radius="0.87" 
+             mass="693"
+             moment="3"
+             cruise-alt="4595"
+             cruise-power="390"
+             cruise-speed="150"
+             cruise-rpm="2500"
+             gear-ratio="0.62">
+             <actionpt x="2.579" y="0.000" z="0.789"/>
+             <piston-engine eng-power="443"
+                            eng-rpm="2700"
+                            displacemen="1145"
+                            compression="6">
+                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+             </piston-engine>
+  </propeller>
+
+  <!-- Avant -->
+  <gear x="3.875" y="0" z="-1.5" 
+        compression="1" 
+        spring = "15" 
+        sfric = "0.8" 
+        dfric = "0.7" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="0" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <!-- Centrale -->
+  <gear x="0.491" y="0" z="-1.4" 
+        compression="1.2" 
+        spring = "15" 
+        sfric = "0.85" 
+        dfric = "0.75" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="0" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.25">
+  </gear>
+ 
+  <!-- Arriere -->
+  <gear x="-2.867" y="0" z="-1.3" 
+        compression="1.1" 
+        spring = "8" 
+        sfric = "0.9" 
+        dfric = "0.8" 
+        ignored-by-solver="1"
+        on-water="1" 
+        on-solid="0" 
+        reduce-friction-by-extension="0.9"
+        speed-planing="15" 
+        spring-factor-not-planing="3">
+  </gear>
+
+  <!-- wing floats -->
+  <!-- Left 3 -->
+  <gear x="1.118" y="2.917" z="-1"
+        compression="0.3"
+        spring="0.9"
+        damp="10"
+        sfric="0.8"
+        dfric="0.7"
+        ignored-by-solver="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="15"
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <!-- Right 4 -->
+  <gear x="1.118" y="-2.917" z="-1"
+        compression="0.3"
+        spring="0.9"
+        damp="10"
+        sfric="0.8"
+        dfric="0.7"
+        ignored-by-solver="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="15"
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <!-- 1.6 pounds by liters
+       200 liters = 50 gal = 300.2 pds -->
+  <tank x="0.858" y="3" z="0.112" capacity="300.2"/>
+  <tank x="0.858" y="-3" z="0.112" capacity="300.2"/>
+
+</airplane>

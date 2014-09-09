@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="m33-base.xml">
+
+  <sim>
+
+    <description>Macchi M33 (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">m33-yasim</aero>
+
+  </sim>
+
+</PropertyList>
